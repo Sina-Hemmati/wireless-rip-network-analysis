@@ -1,0 +1,5 @@
+DestinationNode,Path,HopCount,ForwardingClass,Throughput_kbps,AverageDelay_ms,PDR_percent,LostPackets,ThroughputUtilization_percent,Conclusion
+1,0-2-4-1,3,Forwarded through Node 2,411.5827142857143,715.0112857142857,64.79166285714287,1072.7142857142858,66.56333618164062,"Longest RIP route; traffic passes through Node 2 and Node 4, so delay and loss increase under high load."
+2,0-2,1,Not forwarded through Node 2,189.25995714285713,664.9438857142858,45.097615714285716,1135.857142857143,46.33077130998884,Direct destination on the Node 0--Node 2 link; affected by Node 2 contention but not by multi-hop forwarding.
+3,0-3,1,Not forwarded through Node 2,593.0275714285715,218.27443428571428,69.82202857142858,361.57142857142856,71.7312247140067,Direct route that does not rely on Node 2 forwarding; usually shows the most stable performance.
+4,0-2-4,2,Forwarded through Node 2,134.35538571428572,636.9028571428571,33.1875,1151.0,34.0949698311942,Two-hop route through Node 2 and also a forwarding point toward Node 1; strongly affected by congestion.
